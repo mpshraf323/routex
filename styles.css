@@ -491,6 +491,23 @@ footer {
     float: right;
     display: none;
   }
+
+  .container, .footer-content, .footer-bottom-conent{
+    padding: 16px;
+  }
+  .bannersection h1{
+    font-size: 18px;
+  }
+  .bannersection p {
+    font-size: 12px;
+}
+.wanderlust {
+  align-items: normal;
+}
+.textsection{
+  width: 100%;
+  max-width: 100%;
+}
 }
 @media screen and (max-width: 600px) {
   .navbar.responsive {position: relative;}
