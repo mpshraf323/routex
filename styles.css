@@ -1,0 +1,514 @@
+/* CSS Reset */
+/* Source: https://meyerweb.com/eric/tools/css/reset/ */
+/* v2.0 | 20110126 */
+/* License: none (public domain) */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+p{
+  font-size: 12px;
+}
+/* Basic styling for the menu */
+body {
+  font-family: 'Rubik', sans-serif; /* Apply Rubik font */
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  overflow: hidden;
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out items evenly */
+  align-items: center; /* Center items vertically */
+  padding: 25px 20px;
+}
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+.navbar .logo .logo-text {
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 10px; /* Add some space between logo and text */
+}
+.navbar a {
+  color: rgb(26, 23, 23);
+  text-decoration: none;
+  padding: 10px 15px; /* Adjust padding as needed */
+}
+.navbar a:hover {
+  color:green
+}
+.navbar a.active {
+  color:green
+}
+/* Hamburger menu styles */
+.navbar .icon, .navbar .close-icon {
+  display: none;
+  font-size: 20px; /* Adjust icon size as needed */
+  cursor: pointer;
+  padding: 14px 20px;
+  text-align: center;
+  color: rgb(12, 3, 3);
+}
+@media screen and (max-width: 600px) {
+  .navbar a {
+    display: none; /* Hide menu items by default */
+  }
+  .navbar.responsive .icon {
+    display: block; /* Show hamburger menu icon */
+  }
+  .navbar.responsive .close-icon {
+    display: none; /* Hide close icon */
+  }
+}
+@media screen and (max-width: 600px) {
+  .navbar.responsive { display: flex;
+    flex-direction: column; /* Display items in a column */
+    align-items: flex-start; /* Align items to the start */
+    position: relative;}
+  .navbar.responsive a {
+    float: none;
+    display: block; /* Show menu items one by one */
+    text-align: left;
+    animation: fadeIn 0.5s ease forwards; /* Fade-in animation */
+  }
+  .navbar.responsive a:nth-child(1) {
+    animation-delay: 0.2s; /* Delay for each menu item */
+  }
+  .navbar.responsive a:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  .navbar.responsive a:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  .navbar.responsive a:nth-child(4) {
+    animation-delay: 0.8s;
+  }
+  .navbar.responsive .icon {
+    display: none; /* Hide hamburger menu icon when menu items are shown */
+  }
+  .navbar.responsive .close-icon {
+    display: block; /* Show close icon */
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+}
+
+/* Animation keyframes for fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container{
+  padding: 100px 160px 100px 120px;
+}
+
+.assistance{
+  display: flex;
+  padding-right: 50px;
+}
+
+.assistance i{
+  font-size: 40px;
+    color: #918d8d;
+    padding-right: 10px;
+}
+
+.help{
+  color: #9b9494;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+/* Banner section styles */
+.bannersection {
+  position: relative;
+  text-align: center;
+  color: #333; /* Default text color for banner section */
+}
+
+.bannersection .banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+}
+
+.bannersection h1 {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white; /* Change h1 text color to white */
+}
+
+
+.bannersection p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #eae3e3;
+}
+
+.readmore {
+  padding: 12px 24px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background-color: green;
+  border-radius: 50px;
+  font-size: 14px;
+}
+
+.bannersection img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 128, 0, 0.4); /* Green overlay color */
+  z-index: 0;
+}
+
+.highlight-text {
+  color: green; /* Define the color class for highlighting text */
+}
+
+.wanderlust {
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.image-section {
+  width: 50%; /* Set to 50% width or adjust as needed */
+  max-width: 50%; /* Ensure section does not exceed 50% of the container width */
+  padding: 20px; /* Optional: Add padding for spacing */
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 85%; /* Restrict image container to 85% of image-section */
+}
+
+.image-container img {
+  display: block;
+  width: 80%; /* Ensure image fills its container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the container */
+  border-radius: 4px;
+}
+
+
+
+.textsection {
+  width: 50%; /* Set to 50% width or adjust as needed */
+  max-width: 50%; /* Ensure section does not exceed 50% of the container width */
+  padding-right: 100px;
+}
+
+.stylesec h2 {
+  font-size: 48px;
+  color: #233d3d;
+  padding-bottom: 20px;
+  font-weight: 500;
+}
+.stylesec span {
+  font-size: 16px;
+    font-weight: bold;
+    color: #26790f;
+    font-weight: 400;
+}
+
+.stylesec p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #6a5f5f;
+}
+@media (max-width: 768px) {
+  .image-section,
+  .textsection {
+    flex: 1 1 100%; /* Full width on smaller screens */
+    margin-bottom: 20px; /* Optional: Add margin between sections */
+  }
+  .assistance{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -99;
+  }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .wanderlust {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .image-section,
+  .textsection {
+    flex: 0 0 100%; /* Take full width on smaller screens */
+    padding: 10px; /* Adjust padding as needed */
+  }
+}
+
+.textguides {
+  display: flex;
+  gap: 20px; /* Adjust the gap between items as needed */
+  padding-top: 40px;
+}
+.textguides p{
+  padding-right: 60px;
+  padding-top: 15px;
+}
+.textguides > div {
+  position: relative;
+  flex: 1; /* Each item takes up equal space */
+}
+
+.textguides i{
+  background-color: #21f018;
+    color: white;
+    padding: 2px;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-right: 5px;
+    
+}
+
+
+.discover-section{
+  background-color: #eff5f5;
+
+}
+
+.boxed{
+  display: flex;
+  gap: 30px;
+}
+
+.wanderlust .readmore{
+  margin-top: 40px;
+}
+
+.boxinnerstyle{
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  padding: 50px;
+  text-align: center;
+}
+
+.headingbox{
+  font-size: 18px;
+  color: green;
+  padding-bottom: 20px;
+  font-weight: 500;
+}
+.boxinnerstyle p{
+  font-size: 14px;
+}
+
+.svgstyle{
+  display: block;
+  font-size: 20px;
+}
+
+
+.headingbox span{
+  display: block;
+  padding-bottom: 30px;
+  font-size: 80px;
+}
+/* Footer styles */
+footer {
+  background-color: #035333;
+  color: white;
+  padding: 20px 0;
+  background-image: url(/images/flight.png);
+  background-position: 25px 50px;
+  background-repeat: no-repeat;
+  background-size: 16% auto;
+}
+
+.footer-head h3{
+  font-size: 24px !important;
+}
+
+.footer-head{
+  padding-right: 60px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 60px 110px 90px 120px;
+  font-size: 14px;
+}
+
+.footer-bottom-conent{
+  padding: 20px 120px 10px 120px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #718570;
+  font-size: 12px;
+}
+.footer-menu {
+  flex: 1 1 300px; /* Adjust the width of each column */
+  margin: 10px;
+}
+.footer-menu h3 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+.footer-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+.footer-menu ul li {
+  margin-bottom: 8px;
+}
+.footer-menu ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+.footer-menu ul li a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.social-icons {
+  margin-top: 20px; /* Adjust spacing from the list */
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 12px;
+  color: #f6f1f1;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+
+.footermenu li {
+  display: inline-block;
+  margin-right: 10px; /* Optional: Adjust spacing between items */
+}
+
+
+
+
+
+.footergallery .gallery-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footergallery .gallery-items > div {
+  width: calc(33.33% - 20px); /* Adjust width to fit three items per row */
+  margin-right: 10px; /* Adjust spacing between items */
+  margin-bottom: 10px; /* Adjust vertical spacing */
+  text-align: center; /* Center align text */
+}
+
+/* Clear margin-right for the last item in each row */
+.footergallery .gallery-items > div:nth-child(3n) {
+  margin-right: 0;
+}
+
+.footergallery .gallery-items > div img {
+  max-width: 100%; /* Ensure image does not exceed container width */
+  max-height: 100%; /* Ensure image does not exceed container height */
+  width: auto; /* Ensure image maintains aspect ratio */
+  height: auto; /* Ensure image maintains aspect ratio */
+  object-fit: cover; /* Ensure image covers the entire container */
+  border-radius: 5px;
+}
+
+
+.footer-container ul li i{
+  margin-right: 10px;
+  color: #3cd811;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+  .navbar a.close-icon {
+    float: right;
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    display: none;
+  }
+  .navbar.responsive .close-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .boxed {
+    flex-direction: column;
+}
+}
