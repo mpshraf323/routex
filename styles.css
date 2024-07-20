@@ -508,6 +508,11 @@ footer {
   width: 100%;
   max-width: 100%;
 }
+.stylesec h2 {
+  font-size: 26px;
+  padding-bottom: 10px;
+
+}
 }
 @media screen and (max-width: 600px) {
   .navbar.responsive {position: relative;}
